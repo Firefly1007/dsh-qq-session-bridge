@@ -1,0 +1,51 @@
+{
+  "name": "dsh-qq-session-bridge",
+  "version": "0.1.0",
+  "description": "DSHA 上连接 QQ 与 DSH 原生会话的 NapCat 插件。",
+  "type": "module",
+  "main": "lib/index-native.js",
+  "license": "MIT",
+  "scripts": {
+    "pack:dsha": "node scripts/pack-dsha.mjs"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "napcat",
+    "onebot",
+    "qqbot",
+    "qq"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.1",
+    "@deepseek-ai/schemastery": ">=3.18.1"
+  },
+  "exports": {
+    ".": "./lib/index-native.js",
+    "./bot-mode": "./lib/bot-mode.js",
+    "./client": "./lib/client-native.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "vendor/runtime",
+    "vendor/doubao-tts",
+    "cordis.patch.yml",
+    "README.md"
+  ]
+}

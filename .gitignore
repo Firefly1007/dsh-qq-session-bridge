@@ -1,0 +1,23 @@
+# 依赖 / 构建产物
+node_modules/
+*.tgz
+
+# QQ / NapCat 在首次启动时下载；仓库保留安装必需的系统依赖和语音客户端。
+vendor/napcat/
+reference/
+__pycache__/
+*.pyc
+
+# 日志 / 临时文件
+*.log
+.tmp*
+.DS_Store
+Thumbs.db
+
+# Release 说明（只在打包发布时用，不进仓库）
+RELEASE_NOTES.md
+
+# 本地配置（含 token，绝不能提交）
+.env
+.env.*
+config.local.json

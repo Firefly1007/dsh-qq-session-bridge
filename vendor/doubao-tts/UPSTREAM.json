@@ -1,0 +1,15 @@
+{
+  "license": "Apache-2.0",
+  "path": "skills/byted-text-to-speech/scripts",
+  "commit": "33fbf1f0c30eb351608f64f95cafb0dda627eb31",
+  "sourceFiles": [
+    "text_to_speech.py",
+    "api_key.py"
+  ],
+  "repository": "https://github.com/bytedance/agentkit-samples",
+  "python": ">=3.10",
+  "dependencies": "python-dependencies.json",
+  "localChanges": [
+    "text_to_speech.py: select documented HTTP Chunked /api/v3/tts/unidirectional endpoint and parse each nonempty JSON line instead of SSE data fields; accept code=0 audio until a complete HTTP response, with optional code=20000000 terminator; reject malformed JSON/base64; cap decoded audio at 8 MiB. The official httpx request, authentication, and streaming transport are retained."
+  ]
+}
