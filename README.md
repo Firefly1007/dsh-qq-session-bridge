@@ -8,6 +8,8 @@
 
 在 DSHA 的插件页面选择“从链接安装”，输入 `https://github.com/Firefly1007/dsh-qq-session-bridge` 并按界面提示安装，然后重启 Web。也可导入自行构建的插件包。首次启动时插件会下载 QQ 和 NapCat，需保持网络可用。
 
+安装完成后，在插件设置中配置 QQ 连接和所需语音服务。
+
 ## 功能
 
 - 自动准备并管理 Linux arm64 QQ、NapCat 和 OneBot；支持正向 WebSocket 与 webhook 接收。
